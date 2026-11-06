@@ -1,0 +1,53 @@
+{
+    "01001000": {
+        "cep": "01001-000",
+        "logradouro": "Praça da Sé",
+        "complemento": "lado ímpar",
+        "bairro": "Sé",
+        "localidade": "São Paulo",
+        "uf": "SP",
+        "ibge": "3550308",
+        "gia": "1004",
+        "ddd": "11",
+        "siafi": "7107"
+    },
+    "04248060": {
+        "cep": "04248-060",
+        "logradouro": "Rua Silva Bueno",
+        "complemento": "até 1200/1201",
+        "bairro": "Ipiranga",
+        "localidade": "São Paulo",
+        "uf": "SP",
+        "ibge": "3550308",
+        "gia": "1004",
+        "ddd": "11",
+        "siafi": "7107"
+    },
+    "20040002": {
+        "cep": "20040-002",
+        "logradouro": "Praça Pio X",
+        "complemento": "",
+        "bairro": "Centro",
+        "localidade": "Rio de Janeiro",
+        "uf": "RJ",
+        "ibge": "3304557",
+        "gia": "",
+        "ddd": "21",
+        "siafi": "6001"
+    },
+    "03155000": {
+        "cep": "03155-000",
+        "logradouro": "Avenida Professor Luiz Ignácio Anhaia Mello",
+        "complemento": "até 2001 - lado ímpar",
+        "unidade": "",
+        "bairro": "Vila Prudente",
+        "localidade": "São Paulo",
+        "uf": "SP",
+        "estado": "São Paulo",
+        "regiao": "Sudeste",
+        "ibge": "3550308",
+        "gia": "1004",
+        "ddd": "11",
+        "siafi": "7107"
+    }
+}
