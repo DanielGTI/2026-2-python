@@ -52,6 +52,25 @@ Como fica o `ceps.json` (um dicionário indexado pelo CEP, o que torna a busca d
 }
 ```
 
+## Principais funções do `main.py`
+
+| Função | O que faz |
+|---|---|
+| `menu_principal()` | Mostra o menu em um laço `while True`, lê a opção com `input()` e chama a função correspondente. Só termina na opção `4` (`break`). |
+| `consultar_cep_local(cep_digitado)` | Remove o hífen e valida o CEP (8 dígitos numéricos), carrega o `ceps.json` com `json.load()` e exibe o endereço, se a chave existir. Trata `JSONDecodeError` para arquivo corrompido. |
+| `fluxo_processamento_etl()` | Orquestra o pipeline: **Extract** (lê o `novo.json`), **Transform + Load** (chama `inserir_na_base_local()` do `converter.py`) e **Cleanup**. Só limpa a entrada se a carga deu certo. |
+| `limpar_arquivo_entrada(caminho_arquivo)` | **Cleanup:** abre o `novo.json` em modo `"w"`, o que apaga o conteúdo, para o dado não ser processado duas vezes. |
+| `inspecionar_arquivo_disco()` | Lê o `ceps.json` direto do disco com `open()` e `read()` e o imprime, para confirmar o que foi gravado. |
+
+Recursos do Python usados nessas funções:
+
+- `open(..., encoding="utf-8")` dentro de `with`, que fecha o arquivo sozinho, mesmo se ocorrer erro.
+- `os.path.exists()`, para checar se o arquivo existe antes de abri-lo.
+- `json.load()` (módulo `json`), que converte o texto do arquivo em dicionário.
+- `try / except`, para mostrar mensagens amigáveis em vez de derrubar o programa.
+- `input()` e `print()` para a interação no terminal, além de `str.strip()`, `str.replace()` e `str.isdigit()` para tratar o texto digitado.
+- `if __name__ == "__main__":`, que só abre o menu quando o arquivo é executado diretamente, e não quando é importado.
+
 ## Como executar
 
 ### Pré-requisito
